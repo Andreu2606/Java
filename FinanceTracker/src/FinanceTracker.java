@@ -210,4 +210,30 @@ public class FinanceTracker
                 .mapToDouble(FinancialRecord::getAmount)
                 .sum();
     }
+    private FileHandler fileHandler = new FileHandler();
+
+    public void saveToFile(String fileName)
+    {
+        fileHandler.saveToFile(records, fileName);
+    }
+
+    public void loadFromFile(String fileName)
+    {
+        List<FinancialRecord> loadedRecord = fileHandler.loadFromFile(fileName);
+        for (FinancialRecord record : loadedRecord)
+        {
+            this.addRecord(record);
+        }
+    }
+
+    public void loadFromFileReplace(String fileName)
+    {
+        List<FinancialRecord> loadedRecords = fileHandler.loadFromFile(fileName);
+        this.records.clear();
+        for (FinancialRecord record : loadedRecords)
+        {
+            this.addRecord(record);
+        }
+    }
+
 }

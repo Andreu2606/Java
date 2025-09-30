@@ -1,0 +1,4 @@
+id,type,category,amount,date
+1,INCOME,Salary,2500.00,2024-01-15
+2,EXPENSE,Food,150.00,2024-01-10
+3,INCOME,Freelance,800.00,2024-01-20
