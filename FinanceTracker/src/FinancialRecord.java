@@ -42,6 +42,11 @@ public class FinancialRecord
         return date;
     }
 
+    public void setType(OperationType type)
+    {
+        this.type = type;
+    }
+
     public void setCategory(String category)
     {
         this.category = category;
