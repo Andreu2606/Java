@@ -235,5 +235,4 @@ public class FinanceTracker
             this.addRecord(record);
         }
     }
-
 }

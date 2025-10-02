@@ -42,6 +42,7 @@ public class FinancialRecord
         return date;
     }
 
+
     public void setType(OperationType type)
     {
         this.type = type;
